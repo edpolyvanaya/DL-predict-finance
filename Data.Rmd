@@ -1,0 +1,60 @@
+---
+title: "Data"
+output: html_document
+---
+
+```{r echo = FALSE}
+#install.packages("formattable")
+library(formattable)
+```
+
+
+```{r echo = FALSE}
+xfun::embed_file(c('~/Downloads/GOOG_stock_sample-2/GOOG_1min_sample_cordates.csv'), name = paste("GOOG.csv"), text = "Download GOOG Stock Dataset")
+```
+
+```{r echo = FALSE}
+xfun::embed_file(c('~/Downloads/FDX_stock_sample/FDX_1min_sample_cordates.csv'), name = paste("FDX.csv"), text = "Download FDX Stock Dataset")
+```
+
+
+```{r echo = FALSE}
+xfun::embed_file(c('~/Downloads/GS_stock_sample/GS_1min_sample_cordates.csv'), name = paste("GS.csv"), text = "Download GS Stock Dataset")
+```
+
+
+```{r echo = FALSE}
+xfun::embed_file(c('~/Downloads/KO_stock_sample/KO_1min_sample_cordates.csv'), name = paste("KO.csv"), text = "Download KO Stock Dataset")
+```
+
+## GOOG Stock
+
+```{r echo = FALSE}
+GOOG = read.csv('~/Downloads/GOOG_stock_sample-2/GOOG_1min_sample_cordates.csv', sep = ";")
+formattable(GOOG[1:1568,])
+```
+
+
+
+## FDX Stock
+
+```{r echo = FALSE}
+FDX = read.csv('~/Downloads/FDX_stock_sample/FDX_1min_sample_cordates.csv', sep = ";")
+formattable(FDX[1:1568,])
+```
+
+## GS Stock
+
+```{r echo = FALSE}
+GS = read.csv('~/Downloads/GS_stock_sample/GS_1min_sample_cordates.csv', sep = ";")
+formattable(GS[1:1568,])
+```
+
+
+## KO Stock
+
+```{r echo = FALSE}
+KO = read.csv('~/Downloads/KO_stock_sample/KO_1min_sample_cordates.csv', sep = ";")
+formattable(KO[1:1568,])
+```
+
